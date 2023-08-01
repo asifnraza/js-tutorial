@@ -23,4 +23,7 @@ let state
 // undefined - value needs to be assign in the data types
 // symboles = unique
 
-// object = 
+// object
+
+console.log(typeof null)
+console.log(typeof undefined)
