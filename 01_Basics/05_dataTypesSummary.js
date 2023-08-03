@@ -31,4 +31,29 @@ const myFun = function(){
     console.log("Hello world");
 }
 
-console.log(typeof newString);
+// console.log(typeof newString);
+
+// -------------Stack and Heap memory---------------------
+
+// Stack [for Primitive data types] || Heap [for non primitive data types]
+
+let myName = "asifraza"
+
+let mySurname = myName
+
+mySurname = "wasif"
+
+console.log(mySurname);
+console.log(myName);
+
+let obj1 = {
+    email: "asif@google.com"
+}
+
+let obj2 = obj1
+
+obj2.email = "wasif@google.com"
+
+
+console.log(obj1.email);
+console.log(obj2.email);
