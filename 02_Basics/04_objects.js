@@ -32,8 +32,34 @@ const obj3 = {...obj1, ...obj2, ...obj4}
 // console.log(obj3);
 
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+
+const course = {
+    coursename: "Js",
+    price: "999",
+    courseinstructor:"Hitesh"
+}
+
+// course.courseinstructor
+
+const {courseinstructor:instructor} = course;
+
+// console.log(courseinstructor);
+console.log(instructor);
+
+// API response in json format
+
+// {
+//     "name": "Asif",
+//     "coursename": "JS",
+//     "price": 9999
+// }
+
+[
+    {},
+    {}
+]
