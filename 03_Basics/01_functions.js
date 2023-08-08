@@ -23,7 +23,7 @@ function sum(a, b) {  // parameters (a, b)
 }
 
 const result = sum(3, 5) // arguments/values (3, null)
-console.log("Result is ", result);
+// console.log("Result is ", result);
 
 
 function loginmessage(username = "Raza"){
@@ -36,4 +36,36 @@ function loginmessage(username = "Raza"){
 }
 
 const msg = loginmessage();
-console.log(msg);
+// console.log(msg);
+
+function calculateCartPrice(val1, val2, ...num) {
+    return num
+}
+
+// console.log(calculateCartPrice(100, 200, 300, 400, 500, 600, 700));
+
+
+const user = {
+    username: "Asif",
+    prices: 199
+}
+
+function handleObject(anyObject) {
+    console.log(`Username is ${anyObject.username} and Price is ${anyObject.price}`);
+}
+
+// handleObject(user);
+
+// handleObject({
+//     username: "Sam",
+//     price: 299
+// })
+
+const myArr = [100, 200, 350, 10, 430]
+
+function secondValueofArray(getArray) {
+    console.log(getArray[1]);    
+}
+// secondValueofArray(myArr)
+
+secondValueofArray([200, 300, 400])
