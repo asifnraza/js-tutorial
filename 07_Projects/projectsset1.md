@@ -4,7 +4,7 @@
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
 # Solution Code
-## Project 1
+## Project 1 - Theme Changer | Solution
 ```javascript
 const buttons = document.querySelectorAll('.button');
 // console.log(buttons);
@@ -35,7 +35,7 @@ buttons.forEach((button) => {
 
 ```
 
-## Project 2
+## Project 2 - BMI Calculator | Solution
 ```javascript
 const form = document.querySelector('form');
 
@@ -63,5 +63,17 @@ form.addEventListener('submit', (e) => {
     }
   }
 });
+
+```
+
+## Project 3 - Clock Time | Solution
+```javascript
+const clock = document.querySelector('#clock');
+// console.log(clock)
+
+setInterval(function () {
+  let date = new Date();
+  clock.innerHTML = date.toLocaleTimeString('en-US', { hour12: true });
+}, 1000);
 
 ```
