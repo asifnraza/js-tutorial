@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur JS</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+let start; // Define the 'start' variable outside of the functions.
+
+let changeText = function () {
+    console.log('hey, current date now is ' + Date.now());
+}
+
+const startTextChange = function () {
+    start = setInterval(changeText, 1000);
+}
+
+const stopTextChange = function () {
+    clearInterval(start);
+}
+
+document.querySelector('#start').addEventListener('click', startTextChange)
+document.querySelector('#stop').addEventListener('click', stopTextChange)
+
+
+</script>
+</html>
