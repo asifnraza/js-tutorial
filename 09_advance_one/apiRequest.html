@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Resuest</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+
+
+    
+</body>
+<script>
+const reqUrl = 'https://api.github.com/users/asifnraza'
+const xhr = new XMLHttpRequest()
+xhr.open('GET', reqUrl)
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        console.log(this.responseText);
+        let data = JSON.parse(this.responseText)
+
+        let imgUrl = data.avatar_url
+        let id = data.id
+        let name = data.name
+
+        document.body.innerHTML = `
+            <button class='btn'>View Profile</button>
+            <div id="avatar"></div>
+            <div id="id"></div>
+            <div id="name"></div>
+        `;
+
+        const viewProfile = document.querySelector('button.btn')
+
+        viewProfile.addEventListener('click', function () {
+            document.getElementById('avatar').innerHTML = `<img src="${imgUrl}" height='200' />`;
+            document.getElementById('id').innerHTML = "ID: " + id;
+            document.getElementById('name').innerHTML = "Name: " + name;
+        })
+    }
+}
+
+xhr.send()
+
+
+
+</script>
+</html>
