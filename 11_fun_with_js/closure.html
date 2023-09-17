@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body style="background: #313131;">
+
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // lexical scopping
+
+    // function init() {
+    //     let name = "asif"
+    //         function displayName() {
+    //             let secret = 'mysecret'
+    //             console.log(name);
+    //         }
+    //         function displayNameTwo() {
+    //             console.log('inner two', name);
+    //             console.log(secret);
+    //         }
+    //         displayName()
+    //         displayNameTwo()
+    // }
+    // init()
+    // console.log('outer', name);
+
+    // closure
+
+    // function makeFun() {
+    //     const name = 'asif'
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myfunc = makeFun()
+    // myfunc()
+
+
+</script>
+<script>
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor = `orange `
+    // }
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = `green `
+    // }
+
+    function clickhandler(color){
+        // document.body.style.backgroundColor = `${color} `
+
+        return function(){
+            document.body.style.backgroundColor = `${color} `
+
+        }
+
+    }
+
+    document.getElementById('orange').onclick = clickhandler('orange')
+    document.getElementById('green').onclick = clickhandler('green')
+
+</script>
+</html>
